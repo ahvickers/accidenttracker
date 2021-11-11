@@ -1,9 +1,8 @@
 Package: accidenttracker
 Title: Tracking US Accidents in 2019 With A Shiny App
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person("Abigail", "Vickers", , "ahopevickers@gmail.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
@@ -12,3 +11,6 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 URL: https://github.com/ahvickers/accidenttracker
 BugReports: https://github.com/ahvickers/accidenttracker/issues
+Depends: 
+    R (>= 2.10)
+LazyData: true
