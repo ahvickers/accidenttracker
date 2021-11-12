@@ -5,7 +5,7 @@
 raw_accident_data <- readr::read_csv("data-raw/US_Accidents2019.csv")
 
 accidents <- raw_accident_data %>%
-  dplyr::select(-(...1)) %>%
+  dplyr::select(-(...1)) %>% # removes extra row # column added when reading file
   dplyr::rename(id = ID, severity = Severity, time = Start_Time, lat = Start_Lat,
          lng = Start_Lng, street = Street, side = Side, city = City,
          county = County, state = State, zip = Zipcode, timezone = Timezone,
@@ -19,5 +19,6 @@ accidents <- raw_accident_data %>%
          roundabt = Roundabout, station = Station, stop = Stop,
          traffic.calm = Traffic_Calming, traffic.sgnl = Traffic_Signal,
          turn.loop = Turning_Loop, day.night = Sunrise_Sunset)
+        # renaming columns to match class style guide
 
 usethis::use_data(accidents, overwrite = TRUE)
