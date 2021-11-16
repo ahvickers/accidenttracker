@@ -1,9 +1,14 @@
 Package: accidenttracker
 Title: Tracking US Accidents in 2019 With A Shiny App
-Version: 0.1.0
-Authors@R: 
-    person("Abigail", "Vickers", , "ahopevickers@gmail.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Version: 0.1.1
+Authors@R: c(
+    person("Abigail", "Vickers", , "avicker5@utk.edu", role = c("aut", "cre")),
+    person("Brandon", "Estrem", , "bestrem@vols.utk.edu", role = "aut"),
+    person("Dian", "Ji", , "dji2@vols.utk.edu", role = "aut"),
+    person("Chance", "Sturrup", , "csturru1@vols.utk.edu", role = "aut")
+    )
+Description: Dataset of US car accidents in 2019 and the functions required to
+  filter and display the data using a Shiny app.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
