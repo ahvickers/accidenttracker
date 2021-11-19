@@ -6,6 +6,7 @@ raw_accident_data <- readr::read_csv("data-raw/US_Accidents2019.csv")
 
 accidents <- raw_accident_data %>%
   dplyr::select(-(...1)) %>% # removes extra row # column added when reading file
+  # renaming columns to match class style guide
   dplyr::rename(id = ID, severity = Severity, time = Start_Time, lat = Start_Lat,
          lng = Start_Lng, street = Street, side = Side, city = City,
          county = County, state = State, zip = Zipcode, timezone = Timezone,
@@ -18,7 +19,13 @@ accidents <- raw_accident_data %>%
          junction = Junction, no.exit = No_Exit, rail = Railway,
          roundabt = Roundabout, station = Station, stop = Stop,
          traffic.calm = Traffic_Calming, traffic.sgnl = Traffic_Signal,
-         turn.loop = Turning_Loop, day.night = Sunrise_Sunset)
-        # renaming columns to match class style guide
+         turn.loop = Turning_Loop, day.night = Sunrise_Sunset) %>%
+  dplyr::filter(!is.na(lat), !is.na(lng), !is.na(id)) %>% # remove missing values
+  dplyr::mutate(year = lubridate::year(time),
+                month = lubridate::month(time, label = TRUE),
+                day = lubridate::day(time),
+                hour = lubridate::hour(time))
+  # separate time column into year, month, day, and hour columns
+
 
 usethis::use_data(accidents, overwrite = TRUE)

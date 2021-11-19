@@ -7,7 +7,7 @@
 #'  \describe{
 #'  \item{id}{unique identifier of accident record}
 #'  \item{severity}{severity of the accident, as a number between 1 and 4, with a 1 having the least impact on traffic}
-#'  \item{time}{time of when accident occurred in local time zone}
+#'  \item{time}{time of when accident occurred in local time zone, date-time format}
 #'  \item{lat}{latitude in GPS coordinate}
 #'  \item{lng}{longitude in GPS coordinate}
 #'  \item{street}{name of street in address record}
@@ -41,6 +41,10 @@
 #'  \item{traffic.sgnl}{TRUE or FALSE, TRUE indicates presence of a traffic signal nearby}
 #'  \item{turn.loop}{TRUE or FALSE, TRUE indicates presence of a turning loop nearby}
 #'  \item{day.night}{indicates the time of day (i.e. day or night) based on sunrise/sunset}
+#'  \item{year}{year when accident occurred}
+#'  \item{month}{month when accident occurred as 3-letter abbreviation}
+#'  \item{day}{day of the month when accident occurred}
+#'  \item{hour}{hour when accident occurred, 24 hour format}
 #'  }
 #'  @source \url{https://www.kaggle.com/sobhanmoosavi/us-accidents}
 "accidents"
