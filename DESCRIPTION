@@ -21,4 +21,6 @@ Depends:
 LazyData: true
 Imports: 
     shiny,
-    leaflet
+    leaflet,
+    rlang,
+    dplyr

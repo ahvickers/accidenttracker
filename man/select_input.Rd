@@ -4,14 +4,14 @@
 \alias{select_input}
 \title{Create input for a shiny app}
 \usage{
-select_input(inputId, label, x, type)
+select_input(inputId, label, choices, type)
 }
 \arguments{
 \item{inputId}{A shiny input ID}
 
 \item{label}{A label for the input}
 
-\item{x}{A vector of choices for the input}
+\item{choices}{A vector of choices for the input}
 
 \item{type}{The type of input, select for selectInput, multiple for selectInput multiple = TRUE, and checkbox for checkboxGroupInput}
 }
