@@ -32,7 +32,7 @@ List of Removed Columns
 - Astronomical_Twilight
 
 
-List of Changes to Data Set
+List of Changes to US_Accidents Data Set
 ---
 - Filtered all of the data to only include points from the year 2019.
 
