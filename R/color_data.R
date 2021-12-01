@@ -1,6 +1,6 @@
 color_data <- function(b){
   switch(b,
-         "None" = us_accidents$severity,
+         "None" = NULL,
          "Severity" = us_accidents$severity,
          "Temperature (F)" = us_accidents$temp,
          "Precipitation" = us_accidents$precip,
