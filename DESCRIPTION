@@ -23,4 +23,5 @@ Imports:
     shiny,
     leaflet,
     rlang,
-    dplyr
+    dplyr,
+    ggplot2
