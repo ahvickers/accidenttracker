@@ -2,7 +2,7 @@
 % Please edit documentation in R/filter_if.R
 \name{filter_if}
 \alias{filter_if}
-\title{Filter only if a condition is met}
+\title{Return a result conditionally}
 \usage{
 filter_if(condition, success)
 }
@@ -15,7 +15,13 @@ filter_if(condition, success)
 The success parameter if the condition is met, or TRUE if not
 }
 \description{
-Filter only if a condition is met
+\code{filter_if()} returns a specified result if the condition is met, or TRUE otherwise
+}
+\details{
+This function is used to reactively filter a dataframe with \code{dplyr::filter()}.
+If the condition is met, the filtering condition specified in \code{success} will be returned,
+filtering the dataframe. If the condition is not met, it will return TRUE.
+Because \code{filter()} accepts any row that returns TRUE, this returns the unfiltered dataframe.
 }
 \examples{
 # Condition returns TRUE, filters successfully

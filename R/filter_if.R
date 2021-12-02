@@ -1,4 +1,11 @@
-#' Filter only if a condition is met
+#' Return a result conditionally
+#'
+#' \code{filter_if()} returns a specified result if the condition is met, or TRUE otherwise
+#'
+#' This function is used to reactively filter a dataframe with \code{dplyr::filter()}.
+#' If the condition is met, the filtering condition specified in \code{success} will be returned,
+#' filtering the dataframe. If the condition is not met, it will return TRUE.
+#' Because \code{filter()} accepts any row that returns TRUE, this returns the unfiltered dataframe.
 #'
 #' @param condition A conditional statement
 #' @param success The result if the conditional statement returns TRUE
