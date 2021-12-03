@@ -4,9 +4,11 @@
 \alias{histogram_plot}
 \title{Choose to plot histogram or bar plot}
 \usage{
-histogram_plot(x, y)
+histogram_plot(data, x, y)
 }
 \arguments{
+\item{data}{A dataframe, specifically the \code{accidents} dataset}
+
 \item{x}{A variable from \code{accidents} to plot}
 
 \item{y}{The number of bins}

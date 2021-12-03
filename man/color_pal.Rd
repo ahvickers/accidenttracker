@@ -4,9 +4,11 @@
 \alias{color_pal}
 \title{Select a color palette}
 \usage{
-color_pal(a)
+color_pal(data, a)
 }
 \arguments{
+\item{data}{A dataframe, specifically the \code{accidents} dataset}
+
 \item{a}{A character string}
 }
 \value{

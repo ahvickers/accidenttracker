@@ -1,8 +1,9 @@
 library(ggplot2)
+library(accidenttracker)
 
 test_that("When state  is passed into histogram_plot, a ggplot object with a geom_bar is returned.", {
   # Act: Get actual values from histogram_plot function.
-  actual <- histogram_plot("state", 5)
+  actual <- histogram_plot(accidents, "state", 5)
 
   # Assert: Assert actual is equal to expected
   expect_s3_class(actual, "ggplot")
@@ -13,7 +14,7 @@ test_that("When state  is passed into histogram_plot, a ggplot object with a geo
 
 test_that("When day.night is passed into histogram_plot, a ggplot object with a geom_bar is returned.", {
   # Act: Get actual values from histogram_plot function.
-  actual <- histogram_plot("day.night", 5)
+  actual <- histogram_plot(accidents, "day.night", 5)
 
   # Assert: Assert actual is equal to expected
   expect_s3_class(actual, "ggplot")
@@ -24,7 +25,7 @@ test_that("When day.night is passed into histogram_plot, a ggplot object with a 
 
 test_that("When wind.dir is passed into histogram_plot, a ggplot object with a geom_bar is returned.", {
   # Act: Get actual values from histogram_plot function.
-  actual <- histogram_plot("wind.dir", 5)
+  actual <- histogram_plot(accidents, "wind.dir", 5)
 
   # Assert: Assert actual is equal to expected
   expect_s3_class(actual, "ggplot")
@@ -35,7 +36,7 @@ test_that("When wind.dir is passed into histogram_plot, a ggplot object with a g
 
 test_that("When side is passed into histogram_plot, a ggplot object with a geom_bar is returned.", {
   # Act: Get actual values from histogram_plot function.
-  actual <- histogram_plot("side", 5)
+  actual <- histogram_plot(accidents, "side", 5)
 
   # Assert: Assert actual is equal to expected
   expect_s3_class(actual, "ggplot")
@@ -46,7 +47,7 @@ test_that("When side is passed into histogram_plot, a ggplot object with a geom_
 
 test_that("When month is passed into histogram_plot, a ggplot object with a geom_bar is returned.", {
   # Act: Get actual values from histogram_plot function.
-  actual <- histogram_plot("month", 5)
+  actual <- histogram_plot(accidents, "month", 5)
 
   # Assert: Assert actual is equal to expected
   expect_s3_class(actual, "ggplot")
@@ -57,7 +58,7 @@ test_that("When month is passed into histogram_plot, a ggplot object with a geom
 
 test_that("When hour is passed into histogram_plot, a ggplot object with a geom_bar is returned.", {
   # Act: Get actual values from histogram_plot function.
-  actual <- histogram_plot("hour", 5)
+  actual <- histogram_plot(accidents, "hour", 5)
 
   # Assert: Assert actual is equal to expected
   expect_s3_class(actual, "ggplot")
@@ -68,7 +69,7 @@ test_that("When hour is passed into histogram_plot, a ggplot object with a geom_
 
 test_that("When hour is passed into histogram_plot, a ggplot object with a geom_histogram is returned.", {
   # Act: Get actual values from histogram_plot function.
-  actual <- histogram_plot("abc", 5)
+  actual <- histogram_plot(accidents, "abc", 5)
 
   # Assert: Assert actual is equal to expected
   expect_s3_class(actual, "ggplot")

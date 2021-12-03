@@ -1,6 +1,6 @@
 #' Return a result conditionally
 #'
-#' \code{filter_if()} returns a specified result if the condition is met, or TRUE otherwise
+#' \code{conditional_filter()} returns a specified result if the condition is met, or TRUE otherwise
 #'
 #' This function is used to reactively filter a dataframe with \code{dplyr::filter()}.
 #' If the condition is met, the filtering condition specified in \code{success} will be returned,
@@ -16,14 +16,14 @@
 #' @examples
 #' # Condition returns TRUE, filters successfully
 #' x <- 5
-#' df <- dplyr::filter(accidents, filter_if(x == 5, day.night == "night"))
+#' df <- dplyr::filter(accidents, conditional_filter(x == 5, day.night == "night"))
 #'
 #' # Condition returns FALSE, filter() sees TRUE, so does not filter dataframe
 #' x <- 3
-#' df <- dplyr::filter(accidents, filter_if(x == 5, day.night == "night"))
+#' df <- dplyr::filter(accidents, conditional_filter(x == 5, day.night == "night"))
 #'
 
-filter_if <- function(condition, success) {
+conditional_filter <- function(condition, success) {
   if (condition) {
     success
   } else {
