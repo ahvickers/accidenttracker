@@ -1,14 +1,14 @@
-#' Select a color pallette
+#' Select a color palette
 #'
-#' \code{color_pal()} returns a color pallette with values assigned to the values
+#' \code{color_pal()} returns a color palette with values assigned to the values
 #' of a column in the \code{accidents} dataset.
 #'
-#' This function returns a color pallette based on the input in the \code{a} argument.
+#' This function returns a color palette based on the input in the \code{a} argument.
 #' It is designed to color markers for a leaflet map in a shiny app based on user selection.
 #'
 #' @param a A character string
 #'
-#' @return A color pallette assigned to the values of a column in the \code{accidents} dataset
+#' @return A color palette assigned to the values of a column in the \code{accidents} dataset
 #' @export
 #'
 color_pal <- function(a){

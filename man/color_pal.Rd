@@ -2,7 +2,7 @@
 % Please edit documentation in R/color_pal.R
 \name{color_pal}
 \alias{color_pal}
-\title{Select a color pallette}
+\title{Select a color palette}
 \usage{
 color_pal(a)
 }
@@ -10,13 +10,13 @@ color_pal(a)
 \item{a}{A character string}
 }
 \value{
-A color pallette assigned to the values of a column in the \code{accidents} dataset
+A color palette assigned to the values of a column in the \code{accidents} dataset
 }
 \description{
-\code{color_pal()} returns a color pallette with values assigned to the values
+\code{color_pal()} returns a color palette with values assigned to the values
 of a column in the \code{accidents} dataset.
 }
 \details{
-This function returns a color pallette based on the input in the \code{a} argument.
+This function returns a color palette based on the input in the \code{a} argument.
 It is designed to color markers for a leaflet map in a shiny app based on user selection.
 }
