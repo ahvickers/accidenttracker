@@ -26,12 +26,10 @@ Because \code{filter()} accepts any row that returns TRUE, this returns the unfi
 \examples{
 # Condition returns TRUE, filters successfully
 x <- 5
-df <- accidents \%>\%
-dplyr::filter(filter_if(x == 5, day.night == "night"))
+df <- dplyr::filter(accidents, filter_if(x == 5, day.night == "night"))
 
 # Condition returns FALSE, filter() sees TRUE, so does not filter dataframe
 x <- 3
-df <- accidents \%>\%
-dplyr::filter(filter_if(x == 5, day.night == "night"))
+df <- dplyr::filter(accidents, filter_if(x == 5, day.night == "night"))
 
 }

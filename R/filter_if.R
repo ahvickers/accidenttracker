@@ -16,13 +16,11 @@
 #' @examples
 #' # Condition returns TRUE, filters successfully
 #' x <- 5
-#' df <- accidents %>%
-#' dplyr::filter(filter_if(x == 5, day.night == "night"))
+#' df <- dplyr::filter(accidents, filter_if(x == 5, day.night == "night"))
 #'
 #' # Condition returns FALSE, filter() sees TRUE, so does not filter dataframe
 #' x <- 3
-#' df <- accidents %>%
-#' dplyr::filter(filter_if(x == 5, day.night == "night"))
+#' df <- dplyr::filter(accidents, filter_if(x == 5, day.night == "night"))
 #'
 
 filter_if <- function(condition, success) {

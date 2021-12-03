@@ -1,4 +1,3 @@
-library(tidyverse)
 library(ggplot2)
 
 test_that("When state  is passed into histogram_plot, a ggplot object with a geom_bar is returned.", {

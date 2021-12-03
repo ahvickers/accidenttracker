@@ -1,3 +1,5 @@
+library(dplyr)
+
 # Arrange: Arranging values to test function 'select_options'.
 column <- c("value 3", "value 2", "value 2", "value 1")
 column2 <- c("value 1")
