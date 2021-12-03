@@ -14,11 +14,11 @@
 
 histogram_plot <- function(x, y){
   if(x == "state" | x == "day.night" | x == "wind.dir" | x == "side" | x == "month" | x == "hour"){
-    ggplot(accidents, aes_string(x)) +
-      geom_bar(width=1)
+    ggplot2::ggplot(accidents, ggplot2::aes_string(x)) +
+      ggplot2::geom_bar(width=1)
   }
   else{
-    ggplot(accidents, aes_string(x)) +
-      geom_histogram(bins = y)
+    ggplot2::ggplot(accidents, ggplot2::aes_string(x)) +
+      ggplot2::geom_histogram(bins = y)
   }
 }
